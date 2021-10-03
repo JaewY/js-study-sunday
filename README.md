@@ -1,4 +1,4 @@
-# 📖 JavaScript Study Sunday
+# 📖 JavaScript Study on Sunday
 
 ## ⏰ 스터디 기간 
 - 21.10.3 ~ 12.26
