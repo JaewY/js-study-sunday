@@ -133,4 +133,4 @@
    RegExp | String | SyntaxError | TypeError |
    undefined | URIError | | |
 
-* 이 이름을 사용해도 오류는 발생하지 않음 but 자바스크립트가 가진 본래 기능을 사용할 수 없음
+- 위 이름을 사용해도 오류는 발생하지 않음 but 자바스크립트가 가진 본래 기능을 사용할 수 없음
