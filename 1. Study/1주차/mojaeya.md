@@ -75,7 +75,7 @@ class Bell { // 클래스 : 벨을 만드는 설계도
 참고로 자바스크립트는 ES6 버전에서 Class라는 문법을 추가하였지만, 언어 기반 자체가 바뀐 것은 아니다.
 
 ```javascript
-// ES6 버전에서 Class라는 문법을 추가되기 전 자바스크립트
+// ES6 버전에서 Class 문법을 추가되기 전 자바스크립트
 function Bell(name, color) {  // 객체를 생성하는 함수 : 생성자 함수
     this.name = name        // 여기서 this는 생성자 함수 자신을 가리킨다.
     this.color = color
