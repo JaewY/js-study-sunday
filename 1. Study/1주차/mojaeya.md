@@ -146,5 +146,9 @@ let card = { suit: "하트", rank: "A" }
 ##
 
 ### 📌 객체는 참조 타입
+
+- 생성된 객체는 메모리를 차지하는 한 덩어리가 된다. 객체 타입의 값을 변수에 대입하면 그 변수는 그 객체를 참조하게 되는것이다.
+- 아래 그림과 같이 변수 a가 card 객체를 참조하게 되므로 a로 card 객체를 읽거나 수정 가능
+
 <p align="center"><img width="70%" src="https://user-images.githubusercontent.com/76654131/136694954-1ffd414b-f968-454b-9b4e-a5815f073b09.png"></p>
 
