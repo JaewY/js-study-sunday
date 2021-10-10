@@ -90,6 +90,7 @@ a.name
 a.color
 a.horn2()
 
+
 // 프로토타입 => 유전자라고 생각하자
 function Bell(name, color) {
     this.name = name
@@ -102,6 +103,7 @@ Bell.prototype.horn2 = function() {
 const a = new Bell('tacobell', 'yellow')
 
 a.horn2()
+
 
 // class 문법 추가
 class Bell {
