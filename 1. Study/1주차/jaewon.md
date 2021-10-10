@@ -134,3 +134,14 @@
    undefined | URIError | | |
 
 - 위 이름을 사용해도 오류는 발생하지 않음 but 자바스크립트가 가진 본래 기능을 사용할 수 없음
+
+
+<참고>
+
+앙마코딩 1:28~
+
+https://youtu.be/P0FY8k916e0
+
+드림코딩 2:46~7:53
+
+https://youtu.be/__Zz17_5FRU
