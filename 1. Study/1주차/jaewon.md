@@ -206,7 +206,19 @@ https://youtu.be/__Zz17_5FRU
                 * 코드로 undefined를 대입한 것이 아니라 자바스크립트 엔진이 변수를 undefined로 초기화 한것!!!
 
 ## ECMAScript 6부터 추가된 데이터 타입
- *심벌
- 
- *템플릿 리터럴
+     *심벌
+        - 자기 자신을 제외한 그 어떤 값과도 다른 유일무이한 값
+        
+        var NONE = Symbol("none");
+        
+        var BLACK = Symbol("black");
+        
+        var WHITE = Symbol("white");
+        
+        
+     *템플릿 리터럴
+        - 일부만 변경해서 반복하거나 재사용할 수 있는 틀
+        - 역따옴표(`)로 묶은 문자열
+        - 일반적인 줄 바꿈 문자 사용 가능
     
+
