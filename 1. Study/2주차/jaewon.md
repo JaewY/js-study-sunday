@@ -127,8 +127,7 @@
       3. 프로그램 수정이 간단해진다
            : 함수만 수정하면 한 번에 수정 가능
            
-           
-           
+                     
  # 객체의 기초 (2) 생성자
    ## 생성자로 객체 생성
       - 생성자 : 
@@ -140,10 +139,62 @@
    ## 메서드를 가진 객체를 생성하는 생성자
       - 생성자에서 'this.프로퍼티 이름'에 함수의 참조를 대입하면 메서드 정의 가능/ 메서드 함수 안에 있는 this는 생성될 인스턴스
   
- # 객체의 기초 (3) 내장 
-      - 
+ # 객체의 기초 (3) 내장 객체
+    ## 내장 생성자
+      - 사용자가 정의하는 생성자 외에도 js에 처음부터 포함된 '내장 생성자' 존재
+      (p.116,117 표추가)
+    
+    ## Date 생성자
+      - 대표적인 내장 생성자
+      - 날짜, 시간 표현하는 객체 생성
+      - Date 객체에 내장된 다양한 메서드를 활용하며 날짜와 시간 처리를 간단하게 할 수 있음
+      - Date 객체는 Date 생성자로 생성
       
+      * Date 객체가 제공하는 주요 메서드
+          now.getFullYear()
+          now.getMonth()
+          now.getDate()
+          now.getDay()
+          now.getHours()
+          now.getMinutes()
+          now.getSeconds()
+          now.getMilliseconds()
+          now.toString()
+          now.toLocaleString()
+          now.toLocaleDateString()
+          now.toLocaleTimeString()
+          now.getUTCHours()
+          now.toUTCString()
+          
+   ## Function 생성자
+      - 함수를 생성하는 내장 생성자
+      - 단점 : Function 생성자로 생성한 함수는 전역 변수와 자신의 지역 변수만 읽고 쓸 수 있음
+      - 함수를 동적으로 생성해야 하는 특별한 상황 외에는 사용 X
+      - 보안 문제 발생 가능성 O
+   
+   ## 기타 내장 객체
+     - (표)
+   
+   ## 전역 객체
+     - 클라이언트 측 js에선s Window 객체가 전역 객체
+     - 웹 브라우저의 전역 객체 프로퍼티는 콘솔에서 다음과 같이 입력하여 확인
+        consolw.dir(window);
+        
+   ## 자바스크립트 객체의 분류
+     - 네이티브 객체, 호스트 객체, 사용자 정의 객체
+     
+     * 네이티브 객체
+      - ECMAScript 사양에 정의된 객체
+      - 내장 생성자(Object, String, Number, Boolean, Array, Function)로 생성된 객체
+      - JSON, Math, Reflect
+    
+     * 호스트 객체
+      - ECMAScript에는 정의되어 있지 않지만 js 실행 환경에 정의된 객체
+      - 브라우저 객체(Window, Navigator, History, Location 등)
+      - DOM에 정의되어 있는 객체, Ajax를 위한 XMLHttpRequest 객체, HTML5의 각종 API 등
       
+     * 사용자 정의 객체
+      - 사용자가 정의한 js 코드를 실행한 결과로 생성된 객체
       
       
  # 배열의 기초
@@ -179,6 +230,11 @@
       - 배열 요소에는 모든 타입의 데이터 할당 가능 / 프로그램에서 참조 가능
   
    ## 배열은 객체
+      - js 배열은 Array 객체, 객체로 배열의 기능을 가상으로 흉내 낸 것
+      - Array 객체는 배열의 인덱스를 문자열로 변환해서 그것을 프로퍼티로 이용
+        즉, 배열에 대괄호 연산자를 사용하는 것은 객체에 대괄호 연산자를 사용하는 것
+        배열의 요소 번호로 숫자 값 대신 문자열 사용 가능
+        
    ## 배열 요소의 추가와 삭제
       - 추가
           var a = ["A", "B", "C"];
