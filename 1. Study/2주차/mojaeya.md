@@ -29,7 +29,7 @@ function square(x) { return x * x }
 - 그래서 아래처럼 정의하지 않은 상태에서 함수를 호출하면 타입 오류 발생
 ```javascript
 conosole.log(square(5) // TypeError : square is not a function
-function square(x) { return x * x };
+function (x) { return x * x };
 ```
 
 ## 함수 안에서의 변수 선언과 변수 hoisting
