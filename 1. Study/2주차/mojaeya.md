@@ -62,7 +62,7 @@ console.log(add.status) // 'ok'
 - 함수의 리턴값으로 리턴 가능
 - 동적으로 프로퍼티를 생성 및 할당 가능
 
-[위에 항목들을 코드로 확인하고  클릭](https://programmer-seva.tistory.com/25)
+[위에 항목들을 코드로 확인하고 싶다면 클릭](https://programmer-seva.tistory.com/25)
 
 ## 참조에 의한 호출
 - 함수는 원시값을 인수로 넘겼을 때랑, 객체를 인수로 넘겼을 때 다르게 동작한다.
