@@ -37,7 +37,7 @@
 ```java
 // JAVA
 Public class Main {
-  public static void main(STring[] args) {
+  public static void main(String[] args) {
   
   Bell a;  // 객체 : 벨
   a = new Bicycle(); // 인스턴스
