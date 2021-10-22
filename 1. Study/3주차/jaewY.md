@@ -163,6 +163,7 @@ var c = msgObj.charAt(3); // String 객체의 메서드를 사용
 [쉼표 연산자]
 [eval 함수] 
 
+## 명시적 타입 변환
 
 
 
