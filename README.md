@@ -23,8 +23,8 @@
 |:---:|---|---|:---:|---|:---:|
 |1|변수와 값|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/1주차/mojaeya.md)<br> [dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/1주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/1주차/jaewon.md)|ALL|---|21.10.10|
 |2|객체와 배열, 함수의 기초|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/2주차/mojaeya.md)<br> [dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/2주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/2주차/jaewon.md)|mojaeya|[sol.](https://github.com/mojaeya/js-study-sunday/blob/main/2.%20Solution/2주차/sol.md)|21.10.17|
-|3|표현식과 연산자|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/mojaeya.md)<br>[dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/jaewY.md)|jaewY|---|21.10.24|
-|4|제어 구문|---|dnjswn123|---|21.10.31|
+|3|표현식과 연산자|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/mojaeya.md)<br>[dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/jaewY.md)|jaewY|[sol.](https://github.com/mojaeya/js-study-sunday/blob/main/2.%20Solution/3주차/sol.md)|21.10.24|
+|4|제어 구문|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/4주차/mojaeya.md)<br>[dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/4주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/4주차/jaewY.md)|dnjswn123|---|21.10.31|
 |5|함수1|---|---|---|21.11.07|
 |6|함수2|---|---|---|21.11.14|
 |7|객체|---|---|---|21.11.21|
