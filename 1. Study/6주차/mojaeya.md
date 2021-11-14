@@ -286,6 +286,10 @@ showName("Julius", "Caesar", "Consul", "Imperator");
 
 [ES6의 심볼, 이터레이터, 제네레이터에 대해 알아보자](https://gist.github.com/qodot/ecf8d90ce291196817f8cf6117036997)
 
+<br>
+<br>
+<br>
+
 참조 및 인용)
 https://jeongah-story.tistory.com/124   
 https://ko.javascript.info/rest-parameters-spread   
