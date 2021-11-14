@@ -218,12 +218,12 @@ setTimeout(() => {
 
 # ES6부터 추가된 함수의 기능
 
-## 화살표 함수 (arrow function)
+## 1. 화살표 함수 (arrow function)
 <img width="50%" src="https://user-images.githubusercontent.com/76654131/141679525-0920ff32-4cd4-44bc-949d-4982a126ab21.png">
 
 <img width="50%" src="https://user-images.githubusercontent.com/76654131/141679673-d988e664-a49c-4332-a5ca-18a8f6ee460c.png">
 
- ## 나머지 매개변수
+ ## 2. 나머지 매개변수
  
  ```javascript
  // 일반함수에서는 arguments 변수 사용 가능 : 가변인자함수
