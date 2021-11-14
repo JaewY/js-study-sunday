@@ -284,6 +284,14 @@ showName("Julius", "Caesar", "Consul", "Imperator");
 나머지 매개변수는 남아있는 인수를 모으는 역할을 하므로 마지막이 아닌 부분에 있으면 에러가 발생한다.
 
 
+[ES6의 심볼, 이터레이터, 제네레이터에 대해 알아보자](https://gist.github.com/qodot/ecf8d90ce291196817f8cf6117036997)
+
+참조 및 인용)
+https://jeongah-story.tistory.com/124   
+https://ko.javascript.info/rest-parameters-spread   
+https://www.youtube.com/watch?v=5kRgzyGRPrU    
+https://gist.github.com/qodot/ecf8d90ce291196817f8cf6117036997   
+
 
 
 
