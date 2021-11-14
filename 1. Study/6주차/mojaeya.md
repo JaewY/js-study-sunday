@@ -266,7 +266,7 @@ alert( sumAll(1, 2) ); // 3
 alert( sumAll(1, 2, 3) ); // 6
 ```
 
-### 앞부분의 매개변수는 변수로, 그 이외의 매개변수들은 배열로 모을 수도 있습니다.
+### 앞부분의 매개변수는 변수로, 그 이외의 매개변수들은 배열로 모을 수도 있다.
 ```javascript
 function showName(firstName, lastName, ...titles) {
   alert( firstName + ' ' + lastName ); // Julius Caesar
@@ -280,9 +280,17 @@ function showName(firstName, lastName, ...titles) {
 
 showName("Julius", "Caesar", "Consul", "Imperator");
 ```
-#### 나머지 매개변수는 항상 마지막에 있어야 합니다.
+#### 나머지 매개변수는 항상 마지막에 있어야 한다.
 나머지 매개변수는 남아있는 인수를 모으는 역할을 하므로 마지막이 아닌 부분에 있으면 에러가 발생한다.
 
+### 인수의 기본값 (Default parameters)
+```javascript
+function multiply(a, b=1) {
+     return a*b;
+}
+multiply(3) // 3
+multiply(3, 2) // 6
+```
 ---
 
 [ES6의 심볼, 이터레이터, 제네레이터에 대해 알아보자](https://gist.github.com/qodot/ecf8d90ce291196817f8cf6117036997)
