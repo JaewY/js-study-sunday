@@ -26,6 +26,6 @@
 |3|표현식과 연산자|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/mojaeya.md)<br>[dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/3주차/jaewY.md)|jaewY|[sol.](https://github.com/mojaeya/js-study-sunday/blob/main/2.%20Solution/3주차/sol.md)|21.10.24|
 |4|제어 구문|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/4주차/mojaeya.md)<br>[dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/4주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/4주차/jaewY.md)|dnjswn123|[sol.](https://github.com/mojaeya/js-study-sunday/blob/main/2.%20Solution/4%EC%A3%BC%EC%B0%A8/sol.md)|21.10.31|
 |5|함수1|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/5주차/mojaeya.md)<br>[dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/5주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/5주차/jaewY.md)|mojaeya & jaewY|---|21.11.07|
-|6|함수2|---|mojaeya & dnjswn123|---|21.11.14|
+|6|함수2|[mojaeya](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/6주차/mojaeya.md)<br>[dnjswn123](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/6주차/wonju.md)<br>[jaewY](https://github.com/mojaeya/js-study-sunday/blob/main/1.%20Study/6주차/jaewY.md)|mojaeya & dnjswn123|---|21.11.14|
 |7|객체|---|dnjswn123 & jaewY|---|21.11.21|
 |8|배열의 다양한 기능|---|mojaeya|---|21.11.28|
