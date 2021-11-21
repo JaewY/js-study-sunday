@@ -158,7 +158,74 @@
    
       
 # 프로퍼티가 있는지 확인하기
+## 1. in 연산자
+  : 객체 안에 지명한 프로퍼티가 있는지 검색
+  : 검색 대상은 그 객체가 소유한 프로퍼티와 상속받은 프로퍼티
+```javascript
+var person = { name: "Tom" };  // true: 이 객체가 소유한 프로퍼티
+console.log("name" in person);  // true: 이 객체가 소유한 프로퍼티
+console.log("age" in person);  //  false: 프로퍼티가 없음
+console.log("toString" in person);  // true: person은 toString을 상속받았음
+```
+
+## 2. hasOwnProperty 메서드
+   : 지명한 프로퍼티가 그 객체가 소유한 프로퍼티면 true를 반환
+   : 상속받은 프로퍼티면 false를 반환
+```javascript
+var person = { name: "Tom" };
+console.log(person.hasOwnProperty("name"));  // true: 이 객체가 소유한 프로퍼티
+console.log(person.hasOwnProperty("toString"));  // false: 상속받은 프로퍼티
+```
+
+## 3. propertyIsEnumerable 메서드
+   : 지정한 프로퍼티가 그 객체가 소유한 프로퍼티이며 열거할 수 있을 때 true를 반환
+```javascript
+var person1 = {name: "Tom", age: 17};
+var person2 = Object.create(person1);
+person2.name = "Huck";
+console.log(person2.propertyIsEnumerable("name"));  // true: 이 객체가 소유한 열거 가능 프로퍼티
+console.log(person2.propertyIsEnumerable("age"));  // false: 상속받은 프로퍼티
+console.log(OObject.prototype.propertyIsEnumerable("toString"));  // false: 열거할 수 없는 프로퍼티
+```
+
 # 프로퍼티의 열거
+## 1. for/in 문
+   :  객체와 객체의 프로토타입 체인에서 열거할 수 있는 프로퍼티를 찾아내어 꺼내는 반복문
+
+```javascript
+var person1 = { name: "Tom", age: 17 }:
+var person2 = Object.create(person1);
+person2.name = "Huck";
+for(var p in person2) console.log(p);  // name, age... 순서대로 표시됨
+```
+이때 eprson2 객체는 person1 객체에서 상속받은 name 프로퍼티 대신 객체 자신이 소유한 name 프로퍼티를 사용하게됨
+
+
+## 2. Object.keys 메서드
+   : 지정한 객체가 소유한 프로퍼티 중에서 열거할 수 있는 프로퍼티 이름만 배열로 만들어서 반환
+   : 해당 객체가 소유한 프로퍼티 이름만 조회하는 용도로 적합
+```javascript
+var group = { groupName: "Tennis circle" };
+var person = Object.create(group);
+person.name = "Tom";
+person.age = 17;
+person.sayHello = function() { console.log("Hello! " + this.name); };
+Object.defineProperty(person, "sayHello", {enumerable: false});
+console.log(Object.keys(person));  // ["name", "age"]
+```
+
+## 3. Object.getOwnPropertyNames 메서드
+   : 인수로 지정한 객체가 소유한 프로퍼티 이름을 배열로 만들어서 반환.
+   : 단, 그때 열거할 수 있는 프퍼티와 열거할 수 없는 프로퍼티의 이름을 모두 배열로 만드는 점이 특징
+```javascript
+var group = { groupName: "Tennis circle" };
+var person = Object.create(group);
+person.name = "Tom";
+person.age = 17;
+person.sayHello = function() { console.log("Hello! " + this.name); };
+Object.defineProperty(person, "sayHello", {enumerable: false});
+console.log(Object.getOwnPropertyNames(person));  // ["name", "age", "sayHello"]
+```
 # 객체 잠그기
 # Mixin
 # JSON
