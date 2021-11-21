@@ -227,6 +227,115 @@ Object.defineProperty(person, "sayHello", {enumerable: false});
 console.log(Object.getOwnPropertyNames(person));  // ["name", "age", "sayHello"]
 ```
 # 객체 잠그기
+   : 객체의 확장 가능 속성, 재정의 가능 속성, 쓰기 가능 속성을 설정
+   : 잠금 강도에 따라 3단계 잠금이 가능
+### 확장 가능 속성
+  객체의 확장 가능 속성 : 객체에 새로운 프로퍼티를 추가할 수 있는 지를 결정
+  true : 새로운 프로퍼티 추가할 수 있음
+  false : 새로운 프로퍼티 추가할 수 없음
+  : 사용자가 정의한 객체와 내장 객체는 기본적으로 확장이 가능하지만 호스트 객체의 확장 가능 속성은 자바스크립트 실행 환경에 따라 설정된 값이 다름
+### 1. 확장 방지 : Object.preventExtension 메서드
+  : 인수로 받은 객체를 확장할 수 없게 만듦
+  : 두 번 다시 프로퍼티를 추가할 수 없음
+```javascript
+var person = { name: "Tom" };
+Object.preventExtensions(person);
+person.age = 17;
+console.log("age" in person);  // false
+
+인수로 지정한 객체가 확장 가능한지 확인하는 메서드
+console.log(Object.isExtensible(person));  // false
+```
+
+### 2. 밀봉 : Object.seal 메서드
+   : 인수로 받은 객체를 밀봉
+   : 객체에 프로퍼티를 추가하는 것을 금지하고 기존의 모든 프로퍼티를 재정의할 수 없게 만드는 것
+   : 프로퍼티의 추가, 삭제, 수정을 할 수 없고 값의 읽기와 쓰기만 가능
+
+```javascript
+var person = { name: "Tom" };
+Object.seal(person);
+person.age = 17;
+delete person.name;
+Object.defineProperty(person,"name",{enumerable: flase});
+console.log("name" in person);  //true: name이 삭제되지 않았음
+consoel.log("age" in person); // false: age가 추가되지 않았음
+console.log(Object.getOwnPropertyDescriptor(person,"name"));
+// {value: "Huck", writable: true, enumerable: true, confugurable: false}
+person.name = "Huck";
+console.log(person);  // Object {name: "Huck"}
+
+인수로 받은 객체가 밀봉된 상태인지 확인하는 법
+console.log(Object.isSealed(person));  //true
+```
+
+### 3. 동결 : Objecet.freeze 메서드
+   : 인수로 받은 객체를 동결
+   : 객체에 프로퍼티를 추가하는 것을 금지하고 기존의 모든 프로퍼티를 재정의할 수 없게 만들며 데이터 프로퍼티를 쓸 수 없게 만드는 것
+   : 즉, 객체를 동결하면 객체의 프로퍼티가 읽기만 가능한 상태가 됨.
+ ```javascript
+ var person = { name: "Tom" };
+ Object.freeze(person);
+
+인수로 받은 객체가 동결된 상태인지 확인하는 법
+cosnole.log(Object.isFrozen(person));   true
+```
+
 # Mixin
+  : 특정 객체에 다른 객체가 가지고 있는 프로퍼티를 붙여 넣어 '뒤섞는' 기법
+  : 상속을 사용하지 않는 대신에 특정 객체의 프로퍼티를 동적으로 다른 객체에 추가함
+  : 믹스인 사용 전에 우선 객체의 프로퍼티를 복사하는 함수를 만들어야함.
+  
 # JSON
+  : 자바스크립트 객체를 문자열로 표현하는 데이터 포맷
+  : 객체를 직렬화할 수 있음
+  : 다른 프로그래밍 언어와의 데이터 송수신이 간단해짐
+  : 웹 애플리케이션에서는 서버와 웹 클라이언트가 데이터를 주고받을 때 자주 사용
+  
+ * 표기 방법
+ ```javascript
+ {name: "Tom", age: 17, marriage: false, data -: [2, 5, null]};
+ 
+ JSON 데이터로 바꾸면
+ '{"name":"Tom", "age":17, "marriage":false, "data":[2, 5, null]}'
+ JSON 데이터는 그 전체를 작은따옴표로 묶은 문자열!!!
+ ```
+  
 # ECMAScript 6부터 추가된 객체의 기능
+  1. 프로퍼티 이름으로 심벌 사용하기
+  2. 객체 리터럴에 추가된 기능
+   * 계산된 프로퍼티 이름 : { [계산식]: value }
+ ```javascript
+ var prop = "name", i = 1;
+ var obj = { [prop+i]: "Tom" };
+ console.log(obj);  // Object {name1: "Tom"}
+ var obj = { [Symbol("heart")]: "A" };
+ console.log(obj); // Object {Symbol(heart): "A"}
+ ```
+   * 프로퍼티 정의의 약식 표기 : { prop }
+  프로퍼티 이름이 변수이름과 같을 때 { prop }로 줄여서 표현 가능. 프로퍼티 값은 그 변수의 값
+ ```javascript
+ var prop = 2;
+ var obj = { prop } ;
+ console.log(obj);  // Object { prop: 2}
+ ```
+ 
+   * 메서드 정의의 약식 표기 : { metgod() {} }
+ ```javascript
+ var person = {
+   name: "Tom",
+   sayHello() { console.log("Gello! " = this.name); }
+  };
+  
+  person.sayHello();  //"Hello! Tom"
+  
+  이 코드는 아래와 거의 같다
+  
+  var person = {
+    name: "Tom",
+    sayHello: function() { console.log("Hello! " + this.name); }
+   };
+ ```
+ 
+   * 제너레이터 정의의 약식 표기 : { *generator () {} }
+  프로퍼티의 값이 제너레이터 함수일 때 사용할 수 있는 약식 
