@@ -221,7 +221,7 @@ console.log(a) // ["A", "B", "C", undefined, "E"]. // length = 5
 ```
 
 참조 및 인용.  
-[https://velog.io/@wkahd01/자바스크립트의-자료형](https://velog.io/@wkahd01/자바스크립트의-자료형)
+[https://velog.io/@wkahd01/자바스크립트의-자료형](https://velog.io/@wkahd01/자바스크립트의-자료형)   
 [https://velog.io/@minj9_6/JavaScript-배열과-함수가-객체인-이유를-밝혀라](https://velog.io/@minj9_6/JavaScript-배열과-함수가-객체인-이유를-밝혀라)
 ```잘
 ```
