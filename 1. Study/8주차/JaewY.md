@@ -2,32 +2,31 @@
   ### 수정 메서드
   원본 배열을 바로 수정하는 메서드
   
-  __1. push 메서드__ : 배열 마지막에 하나 이상의 요소를 추가한 다음 그 배열의 길이를 반환 
-      
-  ```javascsript
-         var a = ["A", "B", "C"];
-         a.push("D"); // a의 내용 : ["A", "B", "C", "D"] : 반환값 = 4
-  ``` 
+  __1. push 메서드__ : 배열 마지막에 하나 이상의 요소를 추가한 다음 그 배열의 길이를 반환       
+```javascript
+var a = ["A", "B", "C"];
+a.push("D"); // a의 내용 : ["A", "B", "C", "D"] : 반환값 = 4
+``` 
    
    __2. pop 메서드__ : 배열의 마지막 요소를 잘라내어 반환
       
-   ```javascsript
-         var a = ["A", "B", "C"];
-         a.pop(); // a의 내용 : ["A", "B"] : 반환값 = "C"
+   ```javascript
+     var a = ["A", "B", "C"];
+     a.pop(); // a의 내용 : ["A", "B"] : 반환값 = "C"
    ```
    
    __3. shift 메서드__ : 배열의 첫 번째 요소를 제거한 후 모든 배열 요소를 왼쪽으로 이동시킴. 반환값은 삭제된 요소의 값
      
-   ```javascsript
-         var a = ["A", "B", "C"];
-         a.shift(); // a  → ["B", "C"] : 반환값 = "A" 
+   ```javascript
+     var a = ["A", "B", "C"];
+     a.shift(); // a  → ["B", "C"] : 반환값 = "A" 
    ```
       
    __4. unshift 메서드__ : 배열 앞부분에 요소를 한 개 이상 추가한 후 모든 배열 요소를 오른쪽으로 이동시킴(shift와는 반대 방향).반환값은 그 배열의 길이
    
-   ```javascsript
-         var a = ["A", "B", "C"];
-         a.unshift("X"); // a  → ["X", "A", "B", "C"] : 반환값 = "4" 
+   ```javascript
+     var a = ["A", "B", "C"];
+     a.unshift("X"); // a  → ["X", "A", "B", "C"] : 반환값 = "4" 
    ```
       
    __5. splice 메서드__ : 특정 인덱스의 배열 요소를 갈아 끼울 때 사용하는 범용 메서드. 요소를 끼워 넣기만 할 수도 있고 삭제만 할 수도 있음. 삭제된 요소는 배열로 만들어서 반환.
@@ -45,28 +44,28 @@
        
         값이 없으면 단순히 배열에서 요소를 삭제한다. 
         
-   ```javascsript
-         var a = ["A", "B", "C", "D"];
-         a.splice(2); // a  → ["A", "B"] : 반환값 = ["C", "D"] 
+   ```javascript
+     var a = ["A", "B", "C", "D"];
+     a.splice(2); // a  → ["A", "B"] : 반환값 = ["C", "D"] 
    ```  
       
       
-   ```javascsript
-         var a = ["A", "B", "C", "D"];
-         a.splice(-1); // a  → ["A", "B", "C"] : 반환값 = ["D"] 
+   ```javascript
+     var a = ["A", "B", "C", "D"];
+     a.splice(-1); // a  → ["A", "B", "C"] : 반환값 = ["D"] 
    ```  
       
       
-   ```javascsript
-         var a = ["A", "B", "C", "D"];
-         a.splice(1,0,"X","Y"); // a  → ["A", "X", "Y", "B", "C", "D"] : 반환값 = [] 
+   ```javascript
+     var a = ["A", "B", "C", "D"];
+     a.splice(1,0,"X","Y"); // a  → ["A", "X", "Y", "B", "C", "D"] : 반환값 = [] 
    ``` 
       
    __7. sort 메서드__ : 배열 안의 요소를 정렬. 인수로는 실제로 비교를 담당하는 함수의 참조를 넘기며 반환값은 정렬된 배열임.
     
-   ```javascsript
-         var a = [5, 2, 7, 1, 3, 9, 8];
-         a.sort(function(a,b) {return a - b; }); // a  → [1, 2, 3, 5, 7, 8, 9] 
+   ```javascript
+     var a = [5, 2, 7, 1, 3, 9, 8];
+     a.sort(function(a,b) {return a - b; }); // a  → [1, 2, 3, 5, 7, 8, 9] 
    ```  
             f(a, b) < 0이면 a를 b보다 작은 인덱스로 정렬
             f(a, b) == 0이면 a와 b의 순서를 바꾸지 않음
@@ -78,22 +77,22 @@
   
   인수를 지정하지 않으면 쉼표로 배열의 요소 값을 연결해서 반환.
     
-   ```javascsript
-         var a = ["A", "B", "C"];
-         a.join("-"); // → "A-B-C" 
-         a.join("");  // → "ABC"
+   ```javascript
+     var a = ["A", "B", "C"];
+     a.join("-"); // → "A-B-C" 
+     a.join("");  // → "ABC"
    ```  
   
   __2. contact 메서드__ : 인수로 받은 값을 그 배열의 요소로 추가해서 새로운 배열을 생성. 받은 인수가 배열이면 펼친 후에 배열에 추가함.  
   
   인수를 지정하지 않으면 쉼표로 배열의 요소 값을 연결해서 반환.
     
-   ```javascsript
-         var a = ["A", "B", "C"];
-         a.contact(["D", "E"]); // → ["A", "B", "C", "D", "E"]
-         a.contact(["D", "E"], ["F", "G"]); // → ["A", "B", "C", "D", "E", "F", "G"]
-         a.contact(1, "X", true); // → ["A", "B", "C", 1, "X", true]
-         a.contact(["D", ["E", ["F", "G"]]); // → ["A", "B", "C", "D", "E", ["F", "G"]]
+   ```javascript
+     var a = ["A", "B", "C"];
+     a.contact(["D", "E"]); // → ["A", "B", "C", "D", "E"]
+     a.contact(["D", "E"], ["F", "G"]); // → ["A", "B", "C", "D", "E", "F", "G"]
+     a.contact(1, "X", true); // → ["A", "B", "C", 1, "X", true]
+     a.contact(["D", ["E", ["F", "G"]]); // → ["A", "B", "C", "D", "E", ["F", "G"]]
    ```  
    
    
@@ -101,12 +100,12 @@
       * 첫 번째 인수 : 요소를 꺼낼 시작 위치를 뜻하는 인덱스. 이 값이 음수면 이 앖에 배열 길이를 더한 값을 시작 위치로 간주한다. 생략하면 0으로 간주.
       * 두 번째 인수 : 요소를 꺼낼 마지막 위치를 뜻하는 인덱스. 가리키는 요소 바로 이전 요소까지 잘라냄. 이 값이 음수면 배열 길이를 더한 값을 마지막 위치로 간주한다. 생략하면 배열의 끝으로 간주.
     
-   ```javascsript
-         var a = ["A", "B", "C", "D", "E"];
-         a.slice(1, 3); // → ["B", "C"]
-         a.slice(3);  // → ["D", "E"]
-         a.slice(1, -1);  // → ["B", "C", "D"]
-         a.slice(-3, -2);  // → ["C"]
+   ```javascript
+     var a = ["A", "B", "C", "D", "E"];
+     a.slice(1, 3); // → ["B", "C"]
+     a.slice(3);  // → ["D", "E"]
+     a.slice(1, -1);  // → ["B", "C", "D"]
+     a.slice(-3, -2);  // → ["C"]
    ```  
   
   __4. indexOf와 lastIndexOF 메서드__ : 배열 안에서 인수로 지정한 값을 검색해서 가장 먼저 찾은 요소의 인덱스를 반환. 찾지 못했을 대는 -1을 반환. 
@@ -116,25 +115,25 @@
       * 첫 번째 인수 : 검색할 값
       * 두 번째 인수 : 검색을 시작할 인덱스. 생략하면 0으로 간주. 배열 길이를 넘는 값을 입력하면 검색하지 않는다. 값이 음수면 값에 배열 길이를 더한 값을 시작 위치로 가눚.
       
-   ```javascsript
-         var a = ["A", "B", "C", "C", "D"];
-         a.indexOf("C"); // → 2
-         a.lastIndexOf("C");  // → 3
-         a.indexOf("C", 3);  // → 3
+   ```javascript
+     var a = ["A", "B", "C", "C", "D"];
+     a.indexOf("C"); // → 2
+     a.lastIndexOf("C");  // → 3
+     a.indexOf("C", 3);  // → 3
    ```  
   
   __5. toString과 toLocaleString 메서드__ : 배열의 요소를 문자열로 반환하여 쉼표로 연결한 뭄ㄴ자열을 반환. Object.prototype에 있는 같은 이름의 메서드를 다시 정의한 것. 
   
   toLocaleString 메서드는 해당 지역에 맞는 언어로 번역한 문자열로 변환.
   
-   ```javascsript
-        ["A", "B", "C", date].toString();  // → "A, B, C"
-        [1, 2, 3, date].toString();  // → "1, ,2, 3"
-        [1,[2, 3], date].toString();  // → "1, ,2, 3"
+   ```javascript
+     ["A", "B", "C", date].toString();  // → "A, B, C"
+     [1, 2, 3, date].toString();  // → "1, ,2, 3"
+     [1,[2, 3], date].toString();  // → "1, ,2, 3"
         
-        var date = new Date();
-        console.log(["A", "B", "C", date].toString());  // → "A, B, C, Wed Jan 03 2018 22:56:54 GMT+0900 (KST)"
-        console.log(["A", "B", "C", date].toLocaleString());  // → "A, B, C, 2018. 1. 3. 오후 10:56:54"
+     var date = new Date();
+     console.log(["A", "B", "C", date].toString());  // → "A, B, C, Wed Jan 03 2018 22:56:54 GMT+0900 (KST)"
+     console.log(["A", "B", "C", date].toLocaleString());  // → "A, B, C, 2018. 1. 3. 오후 10:56:54"
    ```  
   
   ### 반복 메서드
@@ -148,46 +147,119 @@
 
  __1. forEach 메서드__ : 인수로 받은 함수를 배열의 요소별로 한 번씩 실행. 그 함수에는 인수 세 개(value, index, array)가 전달됨.
  
-   ```javascsript
-        var a = [1, 2, 3, 4, 5];
+   ```javascript
+     var a = [1, 2, 3, 4, 5];
         
-        // 배열의 합을 구한다
-        var sum = 0;
-        a.forEach(function(value) { sum += value; });
-        console.log(sum);  // 15 
+     // 배열의 합을 구한다
+     var sum = 0;
+     a.forEach(function(value) { sum += value; });
+     console.log(sum);  // 15 
         
-        //각 배열 요소의 제곱을 구한다
-        a.forEach(function(v,i,a) { a[i] = v*v; });
-        console.log(a);   // [1, 4, 9, 16, 25]
+     //각 배열 요소의 제곱을 구한다
+     a.forEach(function(v,i,a) { a[i] = v*v; });
+     console.log(a);   // [1, 4, 9, 16, 25]
    ```
  
  
  __2. map 메서드__ : 인수로 받은 함수를 배열의 요소별로 한 번씩 실행하며 마지막에는 그 함수가 반환한 값으로 새로운 배열을 생성. map의 인수로 넘기는 함수는 반드시 값을 반환해야함
  
-   ```javascsript
-        var a = [1, 2, 3, 4, 5];
-        var b = a.map(function(x) { return 2*x; });  // b = [2, 4, 6, 8, 10]
+   ```javascript
+    var a = [1, 2, 3, 4, 5];
+    var b = a.map(function(x) { return 2*x; });  // b = [2, 4, 6, 8, 10]
    ```
    
  __3. reduce 메서드__ : 배열의 첫 번째 요소부터 마지막 요소까지의 합성 곱 처리를한다. 합성 곱 처리란 배열 요소 하나를 함수로 처리한 후에 그 반환값을 다음 번 요소를 처리할 때 함수의 입력 값으로 사용하는 처리 방법. 
  자미가 요소를 처리한 함수가 값을 반환함.
  
-   ```javascsript
-        var a = [1, 2, 3, 4, 5];
-        a.reduce(function(prev, value) { return prev + value; }, 0);  // 15
-        a.reduce(function(prev, value) { return prev + value; });  // 15
-   ```
+ ```javascript
+ var a = [1, 2, 3, 4, 5];
+ a.reduce(function(prev, value) { return prev + value; }, 0);  // 15
+ a.reduce(function(prev, value) { return prev + value; });  // 15
+ ```
 
 # 다차원 배열
+  자바스크립트는 다차원 배열을 정의하기 위한 문법은 제공하지 않지만, 배열에 배열을 중첩하면 다차원 배열과 비슷한 기능을 구현할 수 있음.
+  
   ### 2차원 배열의 생성
+   ```javascript
+    // 2차원 배열을 생성
+    var x= new Array(3);  // 우변을 배열 리터럴 []로 표기할 수도 있음
+    for(var i=0; i<3; i++) {
+      x[i] = new Array(3);
+    }
+    
+    // 2차원 배열에 값을 대입
+    for(var count=1, i=0; i<3; i++) {
+      for(var j=0; j<3; j++) {
+        x[i][j] = count++;
+       }
+     }
+   ```
   ### 다차원 배열의 생성
-  
+   2차원 배열과 같은 방법으로 다차원 배열 만들 수 있음.
+   
+   ```javascript
+    // 3차원 배열을 생성
+    var x= new Array(3);  // 우변을 배열 리터럴 []로 표기할 수도 있음
+    for(var i=0; i<3; i++) {
+      x[i] = new Array(3);
+      for(var j=0; j<3; j++) {
+        x[i][j] = new Array(3);
+      }
+    }
+    
+    // 3차원 배열에 값을 대입
+    for(var count=1, i=0; i<3; i++) {
+      for(var j=0; j<3; j++) {
+        x[i][j] = count++;
+       }
+     }
+   ```
 # 유사 배열 객체
+  자바스크립트 프로그램에서는 배열은 아니지만 배열로 처리할 수 있는 객체(유사 배열 객체)를 다양한 상황에서 사용함. 
+  ### Array.prototype의 메서드를 유사 배열 객체에서 이용하기
+  유사배열 객체는 Array.prototype의 메서드를 직접 사용할 수 없음. 그러나 Function.prototype.call 메서드로 간접 호출하면 사용할 수 있음.
   
-  ### Array.prototype의 메서드를 유사 배열 객체에서 이용학
 # ECMAScript6의 배열과 새롭게 추가된 기능
   ### 비구조화 할당
+  배열, 객체, 반복 가능 객체에서 값을 꺼내어 그 값을 별도의 변수에 대입하는 문장.
   ### 전개 연산자
+  ...을 전개 연산자라 함. 반복 가능한 객체를 반환하는 표현식 앞에 표기하며, 이를 통해 반복 가능한 객체를 배열 리터럴 또는 함수의 인수 목록으로 펼칠 수 있음
+  ```javascript
+    [..."ABC"] // ["A","B","C"]
+    f(..."ABC") // f("A","B","C")와 같음
+  ```
+  
   ### ArrayBuffer와 형식화 배열
+  ArrayBuffer, DataView, 형식화 배열은 연속된 데이터 영역(버퍼)을 조작하기 위해 만들어진 객체. 이들을 활용하면 배열과 이미지 데이터를 빠르게 읽고 쓸 수 있음.
+ 
+ * ArrayBuffer 생성자 : 메모리에 고정 길이를 가진 인접한 영역을 확보. 단, 메모리에 영역을 확보하는 역할만 할 분 버퍼를 조작하는 메서드는 제공하지 않음. 
+  * 형식화 배열 : ArrayBuffer가 확보한 버퍼를 데이터의 저장 장소로 이동하여 데이터의 빠른 읽기와 쓰기를 구현한 객체. 
+  * 형식화 배열과 일반 배열의 차이점
+    - 형식화 배열 요소의 개수는 제한적이다.
+    - 형식화 배열은 길이가 고정되어 있으며 요소를 추가하거나 삭제할 수 없다.
+    - 형식화 배열에서는 Array.prototype의 메서드를 사용할 수 없다. 하지만 TypedArray.prototype이 제공하는 메서드는 사용할 수 있다.
+    - 형식화 배열을 생성하면 모든 요소가 0으로 초기화된다. 
+  
   ### Map
+    - 데이터를 수집하여 활용하기 위한 객체. 
+    - 값을 고유한 식별 정보인 '키'와 값의 쌍을 Map 객체 안에 저장해서 사용.
+    - Map 객체 안에서 키는 고유한 값. 따라서 Map 객체는 키로 값을 사상(Map)한 객체로 간주.
+    - Map 객체는 외부에서 키를 사용하여 원하는 값을 추가/삭제/검색할 수 있음. 
+    - 키와 값의 데이터 타입에는 제한이 없음. 객체 타입도 사용할 수 있고 원시 타입도 사용할 수 있음.
+    - Map 생성자 함수로 생성한다. 인수를 지정하지 않으면 데이터가 없는 빈 Map 객체가 생성됨.
+  ```javascript
+    var map = new Map();
+    console.log(map); // Map {}
+  ```
+  
   ### Set
+    - 중복되지 않는 유일한 데이터를 수집하여 활용하기 위한 객체.
+    - 데이터 값의 단순 집합으로 간주.
+    - 외부에서 키를 사용하여 데이터 값을 추가/삭제/검색할 수 있음.
+    - 값의 데이터 타입에는 제한이 없음. 객체 타입도 사용할 수 있고 원시 타입도 사용할 수 있음.
+    - Set 생성자 함수로 생성한다. 인수를 지정하지 않으면 데이터가 없는 빈 Set 객체가 생성됨.
+  ```javascript
+    var set = new Set();
+    console.log(set); // Set {}
+  ```
