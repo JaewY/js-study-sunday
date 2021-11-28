@@ -5,6 +5,12 @@
 **배열은 Array 타입 객체이며 Array.prototype의 프로퍼티를 상속 받는다.   
 Array.prototype에는 수많은 메서드가 정의되어 있으며, 모든 배열은 이 메서드를 사용할 수 있다.**
 
+```javascript
+const arr1 = new Array()
+const arr2 = [1,2]
+```
+### 인덱스 0부터 시작
+
 ## **수정 메서드** ( _원본 배열을 바로 수정_ )
 
 ****▶** push 메서드** : 배열 마지막에 하나 이상의 요소를 추가한 다음 그 배열의 길이를 반환
@@ -297,6 +303,14 @@ const result = students.reduce((prev, curr) => {
 
   console.log(result / students.length)  // 369 / 5 = 73.8
 ```
+
+### 참고 
+- String.prototype.split()
+=> 문자열을 일정한 구분자로 잘라서 배열로 저장
+
+split() : 구분자가 없기 때문에 문자열 그대로 리턴
+split('') : 공란문자 즉 글자 하나하나로 구분된다.
+split(' ') : space 문자를 기준으로 구분된다.
 
 ---
 
