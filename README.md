@@ -1,7 +1,7 @@
 # 📖 JavaScript Study on Sunday
 
 ## ⏰ 스터디 기간 
-- 21.10.3 ~ 12.26
+- 21.10.3 ~ 12.19
 
 ## 📚 교재
 - [모던 자바스크립트 입문](https://book.naver.com/bookdb/book_detail.nhn?bid=13447219)   
