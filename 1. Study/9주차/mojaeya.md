@@ -179,7 +179,7 @@ prototype이 아닌 클래스 함수 자체에도 메서드를 설정할 수 있
 [https://hyojin96.tistory.com/entry/ES6-class](https://hyojin96.tistory.com/entry/ES6-class).  
 [https://wookshin.github.io/2021/12/14/modernjs-25-class.html](https://wookshin.github.io/2021/12/14/modernjs-25-class.html).  
 [https://chanyeong.com/blog/post/24](https://chanyeong.com/blog/post/24)
-
+[https://www.inflearn.com/course/노드-교과서/dashboard](https://www.inflearn.com/course/노드-교과서/dashboard)
 
 
 
