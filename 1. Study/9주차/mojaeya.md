@@ -174,7 +174,7 @@ prototype이 아닌 클래스 함수 자체에도 메서드를 설정할 수 있
 
 
 
-- 참조 및 인용 링크
+- 참조 및 인용 링크   
 [https://poiemaweb.com/es6-class](https://poiemaweb.com/es6-class).  
 [https://hyojin96.tistory.com/entry/ES6-class](https://hyojin96.tistory.com/entry/ES6-class).  
 [https://wookshin.github.io/2021/12/14/modernjs-25-class.html](https://wookshin.github.io/2021/12/14/modernjs-25-class.html).  
