@@ -274,3 +274,7 @@ Boolean(x) // -> true
 #### 다른 유형의 데이터를 비교하는 것은 예상치 못한 결과를 얻을 수 있다. 위에 내용을 숙지한 뒤 아래 내용으로 점검해보자.
 
 <img width="50%" src="https://user-images.githubusercontent.com/76654131/138594485-daf0efde-73a1-4fb7-9a7b-6b028330a414.png">
+
+참조 및 인용
+[https://velog.io/@k904808/표현식과-연산자](https://velog.io/@k904808/표현식과-연산자)
+[http://www.w3bai.com/ko/js/js_comparisons.html](http://www.w3bai.com/ko/js/js_comparisons.html)
